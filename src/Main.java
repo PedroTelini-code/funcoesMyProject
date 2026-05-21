@@ -12,7 +12,7 @@ public class Main {
         int c = scanner.nextInt();
 
         boolean draw = isDraw(a, b, c);
-        int higher = max(a, b, c); /* esses parametros vão parar lá em x, y, z */ /* CHAMOU A FUNÇÃO AQUI */
+        int higher = max(a, b,c); /* esses parametros vão parar lá em x, y, z */ /* CHAMOU A FUNÇÃO AQUI */
 
         showResult(higher, draw);
 
@@ -22,7 +22,6 @@ public class Main {
     public static int max(int x, int y, int z) { /* Repare que aqui ele não usa void, devido a função retornar um valor inteiro */
 
         int aux = 0;
-        int draw = 0;
 
         if (x > y && x > z) {
             aux = x;
@@ -32,11 +31,7 @@ public class Main {
             aux = z;
         }
 
-        if (aux == 0) {
-            return draw;
-        } else {
-            return aux;
-        }
+        return aux;
     }
 
     public static boolean isDraw (int x, int y, int z) {
